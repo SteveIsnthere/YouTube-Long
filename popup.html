@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Popup</title>
-    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
 </head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        padding: 15px;
+        background-color: #0f0f0f;
+        color: white;
+
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .container {
+        padding: 12px 14px;
+        background-color: rgba(157, 235, 255, 0.025);
+        border-radius: 10px;
+    }
+
+    .button {
+        margin-top: 15px;
+        padding: 3px;
+        position: relative;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: inherit;
+        color: inherit;
+    }
+
+    .gradient-bg {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, #6366f1, #8b5cf6);
+        border-radius: 8px;
+        z-index: 0;
+    }
+
+    .button-content {
+        padding: 8px 16px;
+        background-color: black;
+        border-radius: 6px;
+        position: relative;
+        z-index: 1;
+        color: white;
+        transition: background-color 0.2s;
+    }
+
+    .button-content:hover {
+        background-color: transparent;
+    }
+</style>
+
 <body>
-    <h1>Hide Special Elements</h1>
-    <p>This extension hides elements with the class 'special' on YouTube.</p>
-    <a href="https://www.example.com" target="_blank">Go to Example.com</a>
+    <h1>YouTube Long</h1>
+    <div class="container">
+        <span>Rest assured, no performance hit at all</span>
+        <br><br>
+        <span>Created by Steve, don't accept donations but check out my portfolio if you want</span>
+    </div>
+
+    <a href="https://portfolio-de-steve.vercel.app/" target="_blank">
+        <button class="button">
+            <div class="gradient-bg"></div>
+            <div class="button-content">About me</div>
+        </button>
+    </a>
+    
+
     <script src="popup.js"></script>
 </body>
+
 </html>

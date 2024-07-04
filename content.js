@@ -1,15 +1,13 @@
-function main() {
-    let shelfs = document.querySelectorAll(".ytd-rich-shelf-renderer");
-    shelfs.forEach(element => {
-        element.style.display = "none";
-    });
+const style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = `
+    .ytd-rich-shelf-renderer {
+      display: none;
+    }
+    ytd-reel-shelf-renderer {
+        display: none;
+    }
+`;
+document.head.appendChild(style);
 
-    let miniShelfs = document.querySelectorAll("ytd-reel-shelf-renderer");
-    miniShelfs.forEach(element => {
-        element.style.display = "none";
-    });
-
-    console.log("YouTube Shorts are gone! You're welcome.");
-}
-
-setTimeout(main, 200);
+console.log("YouTube Shorts are gone! You're welcome");
