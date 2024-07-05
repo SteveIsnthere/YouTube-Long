@@ -3,9 +3,7 @@
   "name": "YouTube Long",
   "version": "1.0",
   "description": "A simple extension that hides all youtube shorts, for humanity",
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": [],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
